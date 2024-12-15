@@ -87,22 +87,26 @@ export default function Journal({ user }) {
     <div className="journal-container">
       <div className="entries-container">
         {entries.length === 0 ? (
-          <p>No entries yet. Create your first memory!</p>
+          <p className="console-text">
+            No entries yet. Create your first memory!
+          </p>
         ) : (
           <>
             {entries.map((entry, index) => renderEntry(entry, index))}
-            <div className="entry-controls">
+            <div className="journal-controls">
               <button
+                className="journal-button"
                 onClick={() => turnPage("prev")}
                 disabled={currentPage === 0}
               >
-                ← Previous
+                ◄ PREVIOUS
               </button>
               <button
+                className="journal-button"
                 onClick={() => turnPage("next")}
                 disabled={currentPage === entries.length - 1}
               >
-                Next →
+                NEXT ►
               </button>
             </div>
           </>

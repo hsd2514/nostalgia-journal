@@ -17,10 +17,15 @@ export default function Auth() {
   };
 
   return (
-    <div className="auth-container">
-      <div className="auth-box">
-        <h1>📔 Nostalgia Journal</h1>
-        <button onClick={signInWithGoogle}>Sign in with Google</button>
+    <div className="main-console">
+      <div className="console-header">
+        <div className="console-brand">NOSTALGIA-OS v1.0</div>
+      </div>
+      <div className="auth-container">
+        <div className="console-screen">
+          <h1>📔 BOOT SEQUENCE</h1>
+          <button onClick={signInWithGoogle}>INITIALIZE SYSTEM</button>
+        </div>
       </div>
     </div>
   );

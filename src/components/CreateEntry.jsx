@@ -106,6 +106,7 @@ export default function CreateEntry({ user }) {
             <div>
               <button
                 className="action-button"
+                data-type="img"
                 onClick={() => document.getElementById("file-input").click()}
               >
                 +
@@ -113,7 +114,11 @@ export default function CreateEntry({ user }) {
               <div className="button-label">IMG</div>
             </div>
             <div>
-              <button className="action-button" onClick={handleSubmit}>
+              <button
+                className="action-button"
+                data-type="save"
+                onClick={handleSubmit}
+              >
                 ✓
               </button>
               <div className="button-label">SAVE</div>
@@ -121,6 +126,7 @@ export default function CreateEntry({ user }) {
             <div>
               <button
                 className="action-button"
+                data-type="clear"
                 onClick={() => {
                   setNewEntry({ title: "", content: "" });
                   setImageFile(null);

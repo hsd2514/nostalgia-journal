@@ -1,42 +1,32 @@
 import React from "react";
-import { supabase } from "../supabaseClient";
 
-export default function Navbar({ session, currentView, onNavigate }) {
+const Navbar = ({ currentView, setCurrentView, handleSignOut }) => {
   return (
-    <nav className="navbar">
-      <div className="nav-brand">📔 Nostalgia Journal</div>
-      {session && (
-        <div className="nav-links">
-          <button
-            className={`nav-button ${currentView === "home" ? "active" : ""}`}
-            onClick={() => onNavigate("home")}
-          >
-            New Entry
-          </button>
-          <button
-            className={`nav-button ${
-              currentView === "journal" ? "active" : ""
-            }`}
-            onClick={() => onNavigate("journal")}
-          >
-            My Journal
-          </button>
-          <button
-            className={`nav-button ${
-              currentView === "profile" ? "active" : ""
-            }`}
-            onClick={() => onNavigate("profile")}
-          >
-            Profile
-          </button>
-          <button
-            className="nav-button"
-            onClick={() => supabase.auth.signOut()}
-          >
-            Logout
-          </button>
-        </div>
-      )}
-    </nav>
+    <div className="console-header">
+      <div className="console-brand">NOSTALGIA-OS v1.0</div>
+      <div className="console-nav">
+        <button
+          className={currentView === "home" ? "active" : ""}
+          onClick={() => setCurrentView("home")}
+        >
+          NEW
+        </button>
+        <button
+          className={currentView === "journal" ? "active" : ""}
+          onClick={() => setCurrentView("journal")}
+        >
+          VIEW
+        </button>
+        <button
+          className={currentView === "profile" ? "active" : ""}
+          onClick={() => setCurrentView("profile")}
+        >
+          PROFILE
+        </button>
+        <button onClick={handleSignOut}>EXIT</button>
+      </div>
+    </div>
   );
-}
+};
+
+export default Navbar;
