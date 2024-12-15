@@ -1,0 +1,194 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Position the MusicPlayer at the bottom left corner */
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--console-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Style the Play/Pause button */
+.music-player button {
+  background: var(--button-primary);
+  color: var(--button-text-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+}
+
+.music-player button:hover {
+  background: var(--button-bg-color);
+}
+
+/* Style the Volume Slider */
+.music-player input[type="range"] {
+  width: 150px;
+  cursor: pointer;
+}
+
+/* Adjust MusicPlayer styles for Navbar */
+.navbar .music-player {
+  position: static; /* Remove fixed positioning */
+  background: transparent;
+  padding: 0;
+  border: none;
+  animation: none;
+  gap: 5px; /* Adjust gap for compactness */
+}
+
+.navbar .music-player button {
+  background: var(--button-primary);
+  color: var(--button-text-color);
+  padding: 5px 10px; /* Smaller padding for Navbar */
+  font-size: 0.8rem;
+}
+
+.navbar .music-player input[type="range"] {
+  width: 100px; /* Adjust width for Navbar */
+}
+
+/* Optional: Hide the floating MusicPlayer if placed in Navbar */
+.music-player {
+  /* If you prefer to remove the floating MusicPlayer */
+  display: none;
+}
+
+/* Adjust .console-header to accommodate MusicPlayer */
+.console-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Style MusicPlayer in Navbar */
+.console-header .music-player {
+  position: static;
+  background: transparent;
+  padding: 0;
+  border: none;
+  animation: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.console-header .music-player button {
+  background: var(--button-primary);
+  color: var(--button-text-color);
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.console-header .music-player input[type="range"] {
+  width: 100px;
+}
+
+/* Style the console header */
+.console-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* ...existing styles... */
+}
+
+/* Align console-brand to the left */
+.console-brand {
+  margin-right: auto;
+  /* ...existing styles... */
+}
+
+/* Style navigation buttons */
+.console-nav {
+  display: flex;
+  gap: 20px;
+  /* ...existing styles... */
+}
+
+/* Style the MusicPlayer within the navbar */
+.console-header .music-player {
+  position: static;
+  background: transparent;
+  padding: 0;
+  border: none;
+  animation: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Style MusicPlayer buttons */
+.console-header .music-player button {
+  background: var(--button-primary);
+  color: var(--button-text-color);
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+/* Style MusicPlayer volume slider */
+.console-header .music-player input[type="range"] {
+  width: 100px;
+}
+
+/* Remove floating MusicPlayer if any */
+.music-player {
+  display: none;
+}
