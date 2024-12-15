@@ -1,8 +1,44 @@
-# React + Vite
+# Nostalgia Journal 📔 ✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Preserve your memories, one entry at a time 🌟
 
-Currently, two official plugins are available:
+## About 📖
+Nostalgia Journal is a personal memory keeper that helps you document and cherish your special moments. It's a digital sanctuary for your thoughts, photos, and memories that you want to revisit in the future.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features 🚀
+- 📝 Write daily journal entries
+- 🖼️ Attach photos to your memories
+- 🎨 Multiple Themes: Customize the look and feel of your journal with a variety of themes to suit your mood.
+
+
+## Getting Started 🎯
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/nostalgia-journal.git
+    ```
+2. **Install dependencies**
+    ```bash
+    cd nostalgia-journal
+    npm install
+    ```
+3. **Set up your environment**
+    - Rename `.env.example` to `.env` and fill in your Supabase credentials.
+4. **Start journaling!**
+    ```bash
+    npm run dev
+    ```
+
+## Technology Stack 💻
+- **Frontend**: React.js
+- **Backend & Database**: Supabase
+- **Storage**: Supabase Storage
+- **Styling**: CSS with multiple themes
+
+## Contributing 🤝
+Feel free to contribute to this project by submitting pull requests or opening issues.
+
+## License 📄
+MIT License - Feel free to use this project however you'd like!
+
+---
+Made with ❤️ for preserving memories
